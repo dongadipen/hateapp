@@ -6,109 +6,107 @@
  * @flow
  */
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import * as React from 'react';
+import {StyleSheet, AsyncStorage, BackHandler} from 'react-native';
+import ContctList from './ContctList';
 
 import {
+  Container,
   Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  Content,
+  Body,
+  Text,
+  Label,
+  Item,
+  Button,
+  Icon,
+  Title,
+  Left,
+  Right,
+  View,
+  card,
+} from 'native-base';
+import image0 from './img/download.jpg';
+import image1 from './img/download1.jpg';
+import image2 from './img/download2.jpg';
+import image3 from './img/download3.jpg';
+import image4 from './img/downlaod4.jpg';
+import image5 from './img/downlaod5.jpg';
+import image6 from './img/download6.jpg';
+import image7 from './img/download7.jpg';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+export default class App extends React.Component {
+  state = {
+    contcts: [
+      {
+        name: 'rakesh',
+        lastMsg: 'hello world',
+        lastTime: '10:00 am',
+        image: image0,
+      },
+      {
+        name: 'dipen',
+        lastMsg: ' Doing what you like will always keep you happy . .',
+        lastTime: '9:00 pm',
+        image: image1,
+      },
+      {
+        name: 'miralbahi',
+        lastMsg: 'welcome to react-native..... ',
+        lastTime: '8:30 am',
+        image: image2,
+      },
+      {
+        name: 'kumar pratik',
+        lastMsg: 'hi how are you bro....',
+        lastTime: '7:00 pm',
+        image: image3,
+      },
+      {
+        name: 'rameshbhai chair',
+        lastMsg: 'hindustan glass products',
+        lastTime: '6:40 am',
+        image: image4,
+      },
+      {
+        name: 'v.k cello chair',
+        lastMsg: 'law of attraction',
+        lastTime: '3:20 pm',
+        image: image5,
+      },
+      {
+        name: 'react-native',
+        lastMsg: 'kem cho ?',
+        lastTime: '4:53 am',
+        image: image6,
+      },
+      {
+        name: 'beti bachavo beti padhavo',
+        lastMsg: 'hello gmmmmm su ke kamka',
+        lastTime: '2:30 pm',
+        image: image7,
+      },
+    ],
+  };
+  render() {
+    return (
+      <View style={styles.paragraph}>
+        <ContctList contcts={this.state.contcts} />
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    backgroundColor: 'skyblue',
+    height: '100%',
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  paragraph: {
+    fontSize: 10,
+    fontWeight: 'bold',
+    margin: 2,
+    flex: 1,
+    padding: 2,
   },
 });
-
-export default App;
