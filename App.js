@@ -7,13 +7,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 
 import HomeHeader from './HomeHeader';
 
@@ -100,10 +94,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.paragraph}>
+      <Container>
         <HomeHeader />
         <ContctList contcts={this.state.contcts} />
-      </View>
+      </Container>
     );
   }
 }

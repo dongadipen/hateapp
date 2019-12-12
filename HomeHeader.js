@@ -15,22 +15,20 @@ import {
 export default class HomeHeader extends React.Component {
   render() {
     return (
-      <Container>
-        <Header>
-          <Body>
-            <Title>Hateapp</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name="search" />
-            </Button>
+      <Header>
+        <Body>
+          <Title>Hateapp</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name="search" />
+          </Button>
 
-            <Button transparent>
-              <Icon name="more" />
-            </Button>
-          </Right>
-        </Header>
-      </Container>
+          <Button transparent>
+            <Icon name="more" />
+          </Button>
+        </Right>
+      </Header>
     );
   }
 }
