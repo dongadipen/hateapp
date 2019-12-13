@@ -1,5 +1,6 @@
 import React from 'react';
 import {} from 'react-native';
+import HomeFooter from './HomeFooter';
 
 import {
   Container,
@@ -10,15 +11,20 @@ import {
   Header,
   Button,
   Icon,
+  Content,
+  Subtitle,
 } from 'native-base';
 
 export default class HomeHeader extends React.Component {
   render() {
     return (
       <Header>
-        <Body>
-          <Title>Hateapp</Title>
-        </Body>
+        <Left>
+          <Body>
+            <Title style={{margin: 10}}>HateApp</Title>
+          </Body>
+        </Left>
+
         <Right>
           <Button transparent>
             <Icon name="search" />

@@ -12,6 +12,7 @@ import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 import HomeHeader from './HomeHeader';
 
 import ContctList from './ContctList';
+import HomeFooter from './HomeFooter';
 
 import {
   Container,
@@ -96,6 +97,7 @@ export default class App extends React.Component {
     return (
       <Container>
         <HomeHeader />
+        <HomeFooter />
         <ContctList contcts={this.state.contcts} />
       </Container>
     );
