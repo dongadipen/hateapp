@@ -54,7 +54,7 @@ export default class App extends React.Component {
         image: image1,
       },
       {
-        name: 'miralbahi',
+        name: 'miralbhai',
         lastMsg: 'welcome to react-native..... ',
         lastTime: '8:30 am',
         image: image2,
