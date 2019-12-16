@@ -34,7 +34,11 @@ export default class App extends React.Component {
             }}>
             <Text style={{fontSize: 13}}>STATUS</Text>
           </Button>
-          <Button active>
+          <Button
+            Title
+            onPress={() => {
+              this.props.navigation.navigate('Call');
+            }}>
             <Text style={{fontSize: 13}}>CALLS</Text>
           </Button>
         </FooterTab>

@@ -11,7 +11,7 @@ import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 
 import HomeHeader from './HomeHeader';
 
-import ContctList from './ContctList';
+import ContactList from './ContactList';
 import HomeFooter from './HomeFooter';
 
 import {
@@ -41,7 +41,7 @@ import image7 from './img/download7.jpg';
 
 export default class App extends React.Component {
   state = {
-    contcts: [
+    contact: [
       {
         name: 'rakesh',
         lastMsg: 'hello world',
@@ -98,7 +98,7 @@ export default class App extends React.Component {
       <Container>
         <HomeHeader />
         <HomeFooter navigation={this.props.navigation} />
-        <ContctList contcts={this.state.contcts} />
+        <ContactList contact={this.state.contact} />
       </Container>
     );
   }

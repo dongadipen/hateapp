@@ -14,26 +14,26 @@ import {
   Badge,
 } from 'native-base';
 
-export default class ContctList extends React.Component {
+export default class ContactList extends React.Component {
   render() {
     return (
       <Content>
         <List>
-          {this.props.contcts.map(contct => {
+          {this.props.contact.map(contact => {
             return (
               <ListItem avatar>
                 <Left>
-                  <Thumbnail source={contct.image} />
+                  <Thumbnail source={contact.image} />
                 </Left>
                 <Body>
-                  <Text numberOfLines={1}>{contct.name}</Text>
+                  <Text numberOfLines={1}>{contact.name}</Text>
                   <Text note numberOfLines={1}>
-                    {contct.lastMsg}
+                    {contact.Date}
                   </Text>
                 </Body>
 
                 <Right>
-                  <Text note>{contct.lastTime}</Text>
+                  <Text note>{contact.lastTime}</Text>
                   <Badge success>
                     <Text>2</Text>
                   </Badge>
