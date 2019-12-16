@@ -5,7 +5,7 @@ import image from './img/12345.jpg';
 import HomeHeader from './HomeHeader';
 import HomeSubHeader from './HomeSubHeader';
 
-export default class App extends React.Component {
+export default class Status extends React.Component {
   render() {
     return (
       <Container>
