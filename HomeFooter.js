@@ -30,7 +30,11 @@ export default class HomeFooter extends React.Component {
           <Button active>
             <Text style={{fontSize: 13}}>STATUS</Text>
           </Button>
-          <Button active>
+          <Button
+            Title
+            onPress={() => {
+              this.props.navigation.navigate('Call');
+            }}>
             <Text style={{fontSize: 13}}>CALLS</Text>
           </Button>
         </FooterTab>

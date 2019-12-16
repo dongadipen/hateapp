@@ -1,18 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
-
-import HomeHeader from './HomeHeader';
-
-import ContactList from './ContactList';
-import HomeFooter from './HomeFooter';
 
 import {
   Container,
@@ -38,55 +25,65 @@ import image4 from './img/downlaod4.jpg';
 import image5 from './img/downlaod5.jpg';
 import image6 from './img/download6.jpg';
 import image7 from './img/download7.jpg';
+import ContactList from './ContactList';
+import HomeHeader from './HomeHeader';
+import HomeFooter from './HomeFooter';
 
-export default class App extends React.Component {
+export default class Call extends React.Component {
   state = {
     contact: [
       {
         name: 'rakesh',
-        lastMsg: 'hello world',
+        Date: '11 December',
+
         lastTime: '10:00 am',
         image: image0,
       },
       {
         name: 'dipen',
-        lastMsg: ' Doing what you like will always keep you happy . .',
+        Date: 'Today',
+
         lastTime: '9:00 pm',
         image: image1,
       },
       {
         name: 'miralbhai',
-        lastMsg: 'welcome to react-native..... ',
+        Date: 'Yesterday',
+
         lastTime: '8:30 am',
         image: image2,
       },
       {
         name: 'kumar pratik',
-        lastMsg: 'hi how are you bro....',
+        Date: '5 Octomber',
+
         lastTime: '7:00 pm',
         image: image3,
       },
       {
         name: 'rameshbhai chair',
-        lastMsg: 'hindustan glass products',
+        Date: '23 September',
+
         lastTime: '6:40 am',
         image: image4,
       },
       {
         name: 'v.k cello chair',
-        lastMsg: 'law of attraction',
+        Date: '17 March',
+
         lastTime: '3:20 pm',
         image: image5,
       },
       {
         name: 'react-native',
-        lastMsg: 'kem cho ?',
+        Date: '28 August',
         lastTime: '4:53 am',
         image: image6,
       },
       {
         name: 'beti bachavo beti padhavo',
-        lastMsg: 'hello gmmmmm su ke kamka',
+        Date: '20 August',
+
         lastTime: '2:30 pm',
         image: image7,
       },
@@ -97,7 +94,7 @@ export default class App extends React.Component {
     return (
       <Container>
         <HomeHeader />
-        <HomeFooter />
+        <HomeFooter navigation={this.props.navigation} />
         <ContactList contact={this.state.contact} />
       </Container>
     );
