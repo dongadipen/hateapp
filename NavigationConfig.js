@@ -2,6 +2,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Home from './App';
 import Page2 from './App2';
+import Status from './Status';
 
 const stackNavigator = createStackNavigator({
   Home: {
@@ -10,6 +11,9 @@ const stackNavigator = createStackNavigator({
 
   Page: {
     screen: Page2,
+  },
+  Status: {
+    screen: Status,
   },
 });
 

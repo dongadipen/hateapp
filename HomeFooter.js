@@ -16,7 +16,7 @@ import {
   FooterTab,
 } from 'native-base';
 
-export default class HomeFooter extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <Footer>
@@ -27,7 +27,11 @@ export default class HomeFooter extends React.Component {
           <Button active>
             <Text style={{fontSize: 13}}>CHATS</Text>
           </Button>
-          <Button active>
+          <Button
+            active
+            onPress={() => {
+              this.props.navigation.navigate('Status');
+            }}>
             <Text style={{fontSize: 13}}>STATUS</Text>
           </Button>
           <Button active>

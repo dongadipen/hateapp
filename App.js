@@ -97,7 +97,7 @@ export default class App extends React.Component {
     return (
       <Container>
         <HomeHeader />
-        <HomeFooter />
+        <HomeFooter navigation={this.props.navigation} />
         <ContctList contcts={this.state.contcts} />
       </Container>
     );
