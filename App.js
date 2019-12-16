@@ -12,7 +12,7 @@ import {SafeAreaView, StyleSheet, ScrollView, StatusBar} from 'react-native';
 import HomeHeader from './HomeHeader';
 
 import ContactList from './ContactList';
-import HomeFooter from './HomeFooter';
+import HomeSubHeader from './HomeSubHeader';
 
 import {
   Container,
@@ -97,7 +97,11 @@ export default class App extends React.Component {
     return (
       <Container>
         <HomeHeader />
-        <HomeFooter navigation={this.props.navigation} />
+        <HomeSubHeader
+          navigation={this.props.navigation}
+          activeButton={'chats'}
+        />
+
         <ContactList contact={this.state.contact} />
       </Container>
     );

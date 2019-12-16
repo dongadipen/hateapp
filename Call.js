@@ -27,7 +27,7 @@ import image6 from './img/download6.jpg';
 import image7 from './img/download7.jpg';
 import ContactList from './ContactList';
 import HomeHeader from './HomeHeader';
-import HomeFooter from './HomeFooter';
+import HomeSubHeader from './HomeSubHeader';
 
 export default class Call extends React.Component {
   state = {
@@ -94,7 +94,10 @@ export default class Call extends React.Component {
     return (
       <Container>
         <HomeHeader />
-        <HomeFooter navigation={this.props.navigation} />
+        <HomeSubHeader
+          navigation={this.props.navigation}
+          activeButton={'calls'}
+        />
         <ContactList contact={this.state.contact} />
       </Container>
     );

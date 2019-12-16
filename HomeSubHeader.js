@@ -24,18 +24,18 @@ export default class App extends React.Component {
           <Button>
             <Icon name="camera" />
           </Button>
-          <Button active>
+          <Button active={this.props.activeButton == 'chats' ? true : false}>
             <Text style={{fontSize: 13}}>CHATS</Text>
           </Button>
           <Button
-            active
+            active={this.props.activeButton == 'status' ? true : false}
             onPress={() => {
               this.props.navigation.navigate('Status');
             }}>
             <Text style={{fontSize: 13}}>STATUS</Text>
           </Button>
           <Button
-            Title
+            active={this.props.activeButton == 'calls' ? true : false}
             onPress={() => {
               this.props.navigation.navigate('Call');
             }}>

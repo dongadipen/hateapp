@@ -1,6 +1,5 @@
 import React from 'react';
 import {} from 'react-native';
-import HomeFooter from './HomeFooter';
 
 import {
   Container,

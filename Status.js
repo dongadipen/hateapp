@@ -1,14 +1,23 @@
 import * as React from 'react';
 import {StyleSheet, AsyncStorage, BackHandler, View, Image} from 'react-native';
-import {} from 'native-base';
+import {Container, Content} from 'native-base';
 import image from './img/12345.jpg';
+import HomeHeader from './HomeHeader';
+import HomeSubHeader from './HomeSubHeader';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={{height: 50, width: 50}}>
-        <Image source={image} />
-      </View>
+      <Container>
+        <HomeHeader />
+        <HomeSubHeader
+          navigation={this.props.navigation}
+          activeButton={'status'}
+        />
+        <Content>
+          <Image source={image} />
+        </Content>
+      </Container>
     );
   }
 }
